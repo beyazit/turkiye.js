@@ -27,5 +27,8 @@
     dosyaKaldır: (path) => {
       return ops.op_remove_file(path);
     },
+    baskent: () => {
+      return "Ankara";
+    },
   };
 })(globalThis);
