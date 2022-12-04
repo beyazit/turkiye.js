@@ -8,23 +8,23 @@
     return args.map((arg) => JSON.stringify(arg)).join(" ");
   }
 
-  globalThis.console = {
-    log: (...args) => {
+  globalThis.konsol = {
+    kayıt: (...args) => {
       core.print(`[🐺]: ${argsToMessage(...args)}\n`, false);
     },
-    error: (...args) => {
+    hata: (...args) => {
       core.print(`[🐺]: ${argsToMessage(...args)}\n`, true);
     },
   };
 
   globalThis.turkiyejs = {
-    readFile: (path) => {
+    dosyaOku: (path) => {
       return ops.op_read_file(path);
     },
-    writeFile: (path, contents) => {
+    dosyaYaz: (path, contents) => {
       return ops.op_write_file(path, contents);
     },
-    removeFile: (path) => {
+    dosyaKaldır: (path) => {
       return ops.op_remove_file(path);
     },
   };

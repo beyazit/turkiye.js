@@ -1,17 +1,17 @@
-console.log("Hello", "turkiyejs!");
-console.error("Boom!");
+konsol.kayıt("Merhaba", "turkiyejs!");
+konsol.hata("Bum!");
 
-const path = "./log.txt";
+const yol = "./kayıt.txt";
 try {
-  const contents = await turkiyejs.readFile(path);
-  console.log("Read from a file", contents);
-} catch (err) {
-  console.error("Unable to read file", path, err);
+  const contents = await turkiyejs.dosyaOku(yol);
+  konsol.kayıt("Dosya okundu", contents);
+} catch (hata) {
+  konsol.hata("Dosya okunamıyor", yol, hata);
 }
 
-await turkiyejs.writeFile(path, "I can write to a file.");
-const contents = await turkiyejs.readFile(path);
-console.log("Read from a file", path, "contents:", contents);
-console.log("Removing file", path);
-turkiyejs.removeFile(path);
-console.log("File removed");
+await turkiyejs.dosyaYaz(yol, "Dosya yazdırabiliyorum");
+const contents = await turkiyejs.dosyaOku(yol);
+konsol.kayıt("Dosyadan oku", yol, "içerik:", contents);
+konsol.kayıt("Dosya kaldırılıyor", yol);
+turkiyejs.dosyaKaldır(yol);
+konsol.kayıt("Dosya kaldırıldı");
