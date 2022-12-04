@@ -30,5 +30,8 @@
     baskent: () => {
       return "Ankara";
     },
+    bayrak: () => {
+      return "🇹🇷";
+    },
   };
 })(globalThis);
