@@ -15,3 +15,4 @@ konsol.kayıt("Dosyadan oku", yol, "içerik:", contents);
 konsol.kayıt("Dosya kaldırılıyor", yol);
 turkiyejs.dosyaKaldır(yol);
 konsol.kayıt("Dosya kaldırıldı");
+konsol.kayıt(turkiyejs.baskent())
